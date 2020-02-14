@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body {
+            padding-top: 0px;
+        }
+        .navbar{
+            font-family: Haettenschweiler;
+            background-color:black;
+        }
+        .navbar a:link {
+            color: orangered;
+            text-decoration: none;
+        }
+
+        .navbar a:visited {
+            color: orangered;
+        }
+
+        .navbar a:hover {
+            color: orange;
+            transition: 1s;
+            /*font-size: 1.2em;*/
+        }
+        .nav li{
+            padding: 2px;
+        }
+    </style>
+</head>
+<header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#" style="font-family: Nero">Abyss Run</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"><img src="~/Content/Images/ScorpuronLogo.png" style="height:20%; width:20%;" /></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item nav-link">
+                    @Html.ActionLink("Home", "Index", "Home")
+                </li>
+                <li class="nav-item nav-link">
+                    @Html.ActionLink("About", "About", "Home")
+                </li>
+                <li class="nav-item nav-link">
+                    @Html.ActionLink("Contact", "Contact", "Home")
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<body>
+    
+          
+               
+    <section class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Jim Lyons</p>
+        </footer>
+    </section>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
