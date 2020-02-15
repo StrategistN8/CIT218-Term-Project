@@ -1,0 +1,58 @@
+﻿@model AbyssRunSite.Models.EnemyModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EnemyModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EnemyHP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnemyHP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnemyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnemyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnemyAttack)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnemyAttack)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnemyDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnemyDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnemyImageSrc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnemyImageSrc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

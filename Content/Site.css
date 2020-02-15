@@ -19,10 +19,8 @@ p{
 body {
     padding-top: 50px;
     padding-bottom: 20px;
-    /*background-image: url(Images/Rock.png);
-    background-repeat: repeat;*/
-    background-color:black;
-    color: white;
+    background-color: rgb(51, 44, 53);
+    color: darkorange;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -30,6 +28,31 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+table{
+    border-color: orange;
+}
+th{
+    font-family: Nero;
+    color:orange;
+    letter-spacing:3px;
+    
+}
+tr{
+    font-family:Xolonium;
+    color:darkorange;
+}
+
+a{
+    color: orange;
+    text-decoration:none;
+}
+a:hover{
+    color: lemonchiffon;
+}
+
+/*hr{
+    border: solid 2px darkorange;
+}*/
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -48,7 +71,7 @@ textarea {
 .jumbotron {
     background-image: url(Images/Rock.png);
     background-repeat: repeat;
-    border-color:orange;
+    
 }
 
 button{

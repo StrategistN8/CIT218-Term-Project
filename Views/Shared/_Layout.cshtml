@@ -12,33 +12,34 @@
             padding-top: 0px;
         }
         .navbar{
-            font-family: Haettenschweiler;
+            font-family: Xolonium;
             background-color:black;
+            /*background-image: url(../../Content/Images/GlyphsH.png);*/
         }
         .navbar a:link {
-            color: orangered;
+            color: darkorange;
             text-decoration: none;
         }
 
         .navbar a:visited {
-            color: orangered;
+            color: darkorange;
         }
 
-        .navbar a:hover {
-            color: orange;
-            transition: 1s;
-            /*font-size: 1.2em;*/
-        }
+            .navbar a:hover {
+                color: orange;
+                transition: 1s;
+                /*font-size: 1.2em;*/
+            }
         .nav li{
             padding: 2px;
         }
     </style>
 </head>
 <header>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark">
         <a class="navbar-brand" href="#" style="font-family: Nero">Abyss Run</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"><img src="~/Content/Images/ScorpuronLogo.png" style="height:20%; width:20%;" /></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
@@ -55,10 +56,7 @@
         </div>
     </nav>
 </header>
-<body>
-    
-          
-               
+<body>                 
     <section class="container body-content">
         @RenderBody()
         <hr />

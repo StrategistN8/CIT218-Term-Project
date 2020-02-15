@@ -29,5 +29,11 @@ namespace AbyssRunSite.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<AbyssRunSite.Models.EnemyModel> EnemyModels { get; set; }
+
+        public System.Data.Entity.DbSet<AbyssRunSite.Models.LevelModel> LevelModels { get; set; }
+
+        public System.Data.Entity.DbSet<AbyssRunSite.Models.ItemModel> ItemModels { get; set; }
     }
 }

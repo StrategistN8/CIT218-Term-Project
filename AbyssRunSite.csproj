@@ -174,11 +174,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EnemyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
+    <Compile Include="Controllers\LevelController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DataAccessLayer\AbyssContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="DataAccessLayer\AbyssInitalizer.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EnemyModel.cs" />
     <Compile Include="Models\FeedbackModel.cs" />
@@ -199,6 +204,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\Exit.png" />
     <Content Include="Content\Images\Glyphs.png" />
+    <Content Include="Content\Images\GlyphsH.png" />
+    <Content Include="Content\Images\GR01.PNG" />
+    <Content Include="Content\Images\GR03.PNG" />
+    <Content Include="Content\Images\GR04.PNG" />
     <Content Include="Content\Images\Legionary.png" />
     <Content Include="Content\Images\Pandinus.png" />
     <Content Include="Content\Images\Peltast.png" />
@@ -360,6 +369,21 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Enemy\Create.cshtml" />
+    <Content Include="Views\Enemy\Delete.cshtml" />
+    <Content Include="Views\Enemy\Details.cshtml" />
+    <Content Include="Views\Enemy\Edit.cshtml" />
+    <Content Include="Views\Enemy\Index.cshtml" />
+    <Content Include="Views\Level\Create.cshtml" />
+    <Content Include="Views\Level\Delete.cshtml" />
+    <Content Include="Views\Level\Details.cshtml" />
+    <Content Include="Views\Level\Edit.cshtml" />
+    <Content Include="Views\Level\Index.cshtml" />
+    <Content Include="Views\Item\Create.cshtml" />
+    <Content Include="Views\Item\Delete.cshtml" />
+    <Content Include="Views\Item\Details.cshtml" />
+    <Content Include="Views\Item\Edit.cshtml" />
+    <Content Include="Views\Item\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
