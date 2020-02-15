@@ -12,6 +12,9 @@ h1{
     font-family: Nero;
 }
 
+h2{
+    font-family:Xolonium;
+}
 p{
     font-family: Xolonium;
 }
@@ -46,9 +49,10 @@ a{
     color: orange;
     text-decoration:none;
 }
-a:hover{
-    color: lemonchiffon;
-}
+    a:hover {
+        color: lemonchiffon;
+        transition: 1s;
+    }
 
 /*hr{
     border: solid 2px darkorange;
