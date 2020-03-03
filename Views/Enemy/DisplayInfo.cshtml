@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AbyssRunSite.Models.EnemyModel>
+
+<article class="jumbotron">
+    <h2>Enemies</h2>
+</article>
+
+<section class="col-12">
+    <table class="table table-responsive-lg">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.EnemyName)</th>
+            <th>Image</th>
+            <th>@Html.DisplayNameFor(model => model.EnemyDescription)</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.EnemyName)</td>
+                <td><img src=@Url.Content(item.EnemyImageSrc) alt="@Html.DisplayFor(modelItem => item.EnemyName)" /></td>
+                <td>@Html.DisplayFor(modelItem => item.EnemyDescription)</td>
+            </tr>
+        }
+
+
+    </table>
+
+</section>

@@ -7,116 +7,110 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AbyssRunSite.Models;
-using AbyssRunSite.DataAccessLayer;
+
 namespace AbyssRunSite.Controllers
 {
-    public class EnemyController : Controller
+    public class FeedbackModelsController : Controller
     {
-        private AbyssContext db = new AbyssContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: EnemyModels
+        // GET: FeedbackModels
         public ActionResult Index()
         {
-            return View(db.Enemies.ToList());
+            return View(db.FeedbackModels.ToList());
         }
 
-        //Week 5: 
-        public ActionResult DisplayInfo()
-        {
-            return View(db.Enemies.ToList());
-        }
-
-        // GET: EnemyModels/Details/5
+        // GET: FeedbackModels/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EnemyModel enemyModel = db.Enemies.Find(id);
-            if (enemyModel == null)
+            FeedbackModel feedbackModel = db.FeedbackModels.Find(id);
+            if (feedbackModel == null)
             {
                 return HttpNotFound();
             }
-            return View(enemyModel);
+            return View(feedbackModel);
         }
 
-        // GET: EnemyModels/Create
+        // GET: FeedbackModels/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: EnemyModels/Create
+        // POST: FeedbackModels/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,EnemyHP,EnemyName,EnemyAttack,EnemyDescription,EnemyImageSrc")] EnemyModel enemyModel)
+        public ActionResult Create([Bind(Include = "Id,FeedbackEmail,FeedbackMessage")] FeedbackModel feedbackModel)
         {
             if (ModelState.IsValid)
             {
-                db.Enemies.Add(enemyModel);
+                db.FeedbackModels.Add(feedbackModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(enemyModel);
+            return View(feedbackModel);
         }
 
-        // GET: EnemyModels/Edit/5
+        // GET: FeedbackModels/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EnemyModel enemyModel = db.Enemies.Find(id);
-            if (enemyModel == null)
+            FeedbackModel feedbackModel = db.FeedbackModels.Find(id);
+            if (feedbackModel == null)
             {
                 return HttpNotFound();
             }
-            return View(enemyModel);
+            return View(feedbackModel);
         }
 
-        // POST: EnemyModels/Edit/5
+        // POST: FeedbackModels/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,EnemyHP,EnemyName,EnemyAttack,EnemyDescription,EnemyImageSrc")] EnemyModel enemyModel)
+        public ActionResult Edit([Bind(Include = "Id,FeedbackEmail,FeedbackMessage")] FeedbackModel feedbackModel)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(enemyModel).State = EntityState.Modified;
+                db.Entry(feedbackModel).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(enemyModel);
+            return View(feedbackModel);
         }
 
-        // GET: EnemyModels/Delete/5
+        // GET: FeedbackModels/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EnemyModel enemyModel = db.Enemies.Find(id);
-            if (enemyModel == null)
+            FeedbackModel feedbackModel = db.FeedbackModels.Find(id);
+            if (feedbackModel == null)
             {
                 return HttpNotFound();
             }
-            return View(enemyModel);
+            return View(feedbackModel);
         }
 
-        // POST: EnemyModels/Delete/5
+        // POST: FeedbackModels/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            EnemyModel enemyModel = db.Enemies.Find(id);
-            db.Enemies.Remove(enemyModel);
+            FeedbackModel feedbackModel = db.FeedbackModels.Find(id);
+            db.FeedbackModels.Remove(feedbackModel);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -175,6 +175,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EnemyController.cs" />
+    <Compile Include="Controllers\FeedbackModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\LevelController.cs" />
@@ -208,6 +209,7 @@
     <Content Include="Content\Images\GR01.PNG" />
     <Content Include="Content\Images\GR03.PNG" />
     <Content Include="Content\Images\GR04.PNG" />
+    <Content Include="Content\Images\Hoplite.png" />
     <Content Include="Content\Images\Legionary.png" />
     <Content Include="Content\Images\Pandinus.png" />
     <Content Include="Content\Images\Peltast.png" />
@@ -384,6 +386,12 @@
     <Content Include="Views\Item\Details.cshtml" />
     <Content Include="Views\Item\Edit.cshtml" />
     <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="Views\FeedbackModels\Create.cshtml" />
+    <Content Include="Views\FeedbackModels\Delete.cshtml" />
+    <Content Include="Views\FeedbackModels\Details.cshtml" />
+    <Content Include="Views\FeedbackModels\Edit.cshtml" />
+    <Content Include="Views\FeedbackModels\Index.cshtml" />
+    <Content Include="Views\Enemy\DisplayInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

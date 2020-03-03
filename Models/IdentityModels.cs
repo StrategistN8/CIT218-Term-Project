@@ -35,5 +35,7 @@ namespace AbyssRunSite.Models
         public System.Data.Entity.DbSet<AbyssRunSite.Models.LevelModel> LevelModels { get; set; }
 
         public System.Data.Entity.DbSet<AbyssRunSite.Models.ItemModel> ItemModels { get; set; }
+
+        public System.Data.Entity.DbSet<AbyssRunSite.Models.FeedbackModel> FeedbackModels { get; set; }
     }
 }

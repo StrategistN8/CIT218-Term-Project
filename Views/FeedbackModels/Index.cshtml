@@ -1,22 +1,21 @@
-﻿@model IEnumerable<AbyssRunSite.Models.LevelModel>
+﻿@model IEnumerable<AbyssRunSite.Models.FeedbackModel>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<section class="jumbotron">
-    <h1>Levels</h1>
-</section>
+<h2>Index</h2>
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table-borderless">
+<table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.LevelName)
+            @Html.DisplayNameFor(model => model.FeedbackEmail)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LevelDescription)
+            @Html.DisplayNameFor(model => model.FeedbackMessage)
         </th>
         <th></th>
     </tr>
@@ -24,10 +23,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.LevelName)
+            @Html.DisplayFor(modelItem => item.FeedbackEmail)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.LevelDescription)
+            @Html.DisplayFor(modelItem => item.FeedbackMessage)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

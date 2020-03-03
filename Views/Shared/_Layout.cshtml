@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -50,17 +50,24 @@
                     @Html.ActionLink("About", "About", "Home")
                 </li>
                 <li class="nav-item nav-link">
+                    @Html.ActionLink("Enemy Info", "DisplayInfo", "Enemy")
+                </li>
+                <li class="nav-item nav-link">
                     @Html.ActionLink("Levels", "Index", "Level")
                 </li>
                 <li class="nav-item nav-link">
                     @Html.ActionLink("Items", "Index", "Item")
                 </li>
                 <li class="nav-item nav-link">
-                    @Html.ActionLink("Enemy Info", "Index", "Enemy")
+                    @Html.ActionLink("Enemies", "Index", "Enemy")
                 </li>
                 <li class="nav-item nav-link">
                     @Html.ActionLink("Contact", "Contact", "Home")
                 </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item nav-link"><a href="#"><i class="fas fa-user-plus"></i>Register</a></li>
+                <li class="nav-item nav-link"><a href="#"><i class="fas fa-sign-in-alt"></i>Login</a></li>
             </ul>
         </div>
     </nav>
@@ -70,7 +77,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Jim Lyons</p>
+            <p class="text-danger">&copy; @DateTime.Now.Year - Jim Lyons</p>
         </footer>
     </section>
 
