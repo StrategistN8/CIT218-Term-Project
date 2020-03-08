@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AbyssRunSite.Models
 {
@@ -11,30 +13,40 @@ namespace AbyssRunSite.Models
     public class LevelModel
     {
         #region FIELDS
-
         private int _id;
         private string _levelName;
         private string _levelDescription;
-
+        private string _levelScreenshotSrc;
         #endregion
 
         #region PROPERTIES
+        [Index]
         public int Id
         {
             get { return _id; }
             set { _id = value; }
         }
+
+        [Display(Name = "Name")]
         public string LevelName
         {
             get { return _levelName; }
             set { _levelName = value; }
         }
+        
+        [Display(Name = "Description")]
         public string LevelDescription
         {
             get { return _levelDescription; }
             set { _levelDescription = value; }
         }
-        
+
+        [Display(Name ="Screenshot File Path")]
+        public string LevelScreenshotSrc
+        {
+            get { return _levelScreenshotSrc; }
+            set { _levelScreenshotSrc = value; }
+        }
         #endregion
 
         #region CONSTRUCTOR

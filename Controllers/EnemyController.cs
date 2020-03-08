@@ -26,6 +26,37 @@ namespace AbyssRunSite.Controllers
             return View(db.Enemies.ToList());
         }
 
+        //Week 6:
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditDisplayInfo([Bind(Include = "Id,EnemyHP,EnemyName,EnemyAttack,EnemyDescription,EnemyImageSrc")] EnemyModel enemyModel)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(enemyModel).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("DisplayInfo");
+            }
+            
+            return View(enemyModel);
+        }
+
+        public ActionResult EditDisplayInfo(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            EnemyModel enemy = db.Enemies.Find(id);
+            if (enemy == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(enemy);
+        }
+        
+        
         // GET: EnemyModels/Details/5
         public ActionResult Details(int? id)
         {

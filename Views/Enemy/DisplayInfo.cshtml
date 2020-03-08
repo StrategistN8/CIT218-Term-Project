@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<AbyssRunSite.Models.EnemyModel>
 
 <article class="jumbotron">
-    <h2>Enemies</h2>
+    <h1>Enemies</h1>
 </article>
 
-<section class="col-12">
+<section class="col-12 jumbotron-fluid">
     <table class="table table-responsive-lg">
         <tr>
             <th>@Html.DisplayNameFor(model => model.EnemyName)</th>
@@ -16,12 +16,19 @@
         {
             <tr>
                 <td>@Html.DisplayFor(modelItem => item.EnemyName)</td>
-                <td><img src=@Url.Content(item.EnemyImageSrc) alt="@Html.DisplayFor(modelItem => item.EnemyName)" /></td>
+                @if (item.EnemyImageSrc != "" && item.EnemyImageSrc != null)
+                {
+                    <td>
+                        <img src=@Url.Content(item.EnemyImageSrc) alt="@Html.DisplayFor(modelItem => item.EnemyName)" />
+                    </td>
+                }
+                else
+                {
+                    <td>No Image Available</td>
+                }
                 <td>@Html.DisplayFor(modelItem => item.EnemyDescription)</td>
             </tr>
         }
-
-
     </table>
 
 </section>

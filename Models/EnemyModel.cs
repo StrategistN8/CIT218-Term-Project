@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AbyssRunSite.Models
 {
@@ -20,31 +22,51 @@ namespace AbyssRunSite.Models
         #endregion
 
         #region PROPERTIES
+
+        [Index]
+        [Required]
+        [ConcurrencyCheck]
         public int Id
         {
             get { return _id; }
             set { _id = value; }
         }
+       
+        [Display(Name = "HP")]
+        [Range(1, 10)]
         public int EnemyHP
         {
             get { return _enemyHP; }
             set { _enemyHP = value; }
         }
+        
+        [Display(Name = "Name")]
+        [Required]
+        [MaxLength(50, ErrorMessage = "Names should be limited to 50 characters")]
         public string EnemyName
         {
             get { return _enemyName; }
             set { _enemyName = value; }
         }
+
+        [Display(Name = "Weapons")]
+        [MaxLength(150, ErrorMessage = "Limited to 150 characters")]
         public string EnemyAttack
         {
             get { return _enemyAttack; }
             set { _enemyAttack = value; }
         }
+
+        [Display(Name = "Description")]
+        [MaxLength(250, ErrorMessage = "Descriptions should be limited to 250 characters")]
         public string EnemyDescription
         {
             get { return _enemyDescription; }
             set { _enemyDescription = value; }
         }
+
+        [Display(Name = "Image File Path")]   // This one should not be visable to the end user.
+        [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "No Image")]
         public string EnemyImageSrc
         {
             get { return _enemyImageSrc; }

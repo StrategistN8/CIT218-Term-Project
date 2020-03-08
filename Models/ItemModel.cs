@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AbyssRunSite.Models
 {
@@ -14,24 +16,38 @@ namespace AbyssRunSite.Models
         #region FIELDS
         private int _id;
         private string _itemName;
-
-       
-
-
+        private string _itemDescription;
+        private string _itemImgSrc;
         #endregion
 
         #region PROPERTIES
+        [Index]
         public int Id
         {
             get { return _id; }
             set { _id = value; }
         }
+        
+        [Display(Name = "Name")]
         public string ItemName
         {
             get { return _itemName; }
             set { _itemName = value; }
         }
 
+        [Display(Name = "Description")]
+        public string ItemDescription
+        {
+            get { return _itemDescription; }
+            set { _itemDescription = value; }
+        }
+
+        [Display(Name = "Image File Path")] // Should not be accessible by the end user.
+        public string ItemImageSrc
+        {
+            get { return _itemImgSrc; }
+            set { _itemImgSrc = value; }
+        }
         #endregion
 
         #region CONSTRUCTOR
