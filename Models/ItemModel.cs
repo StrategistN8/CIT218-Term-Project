@@ -42,7 +42,7 @@ namespace AbyssRunSite.Models
             set { _itemDescription = value; }
         }
 
-        [Display(Name = "Image File Path")] // Should not be accessible by the end user.
+        [Display(Name = "Image")] 
         public string ItemImageSrc
         {
             get { return _itemImgSrc; }

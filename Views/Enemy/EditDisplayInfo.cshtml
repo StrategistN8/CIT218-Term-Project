@@ -1,21 +1,51 @@
-﻿
-@*<h2>Edit Enemy Summary</h2>
+﻿@model AbyssRunSite.Models.EnemyModel
+
+<article class="jumbotron">
+    <h1>Edit Enemy Summary</h1>
+</article>
+
 @using (Html.BeginForm())
 {
 
     @Html.AntiForgeryToken()
-    <div class="form-horizontal">
-        <h2>Enemy Info</h2>
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">  
-            @Html.LabelFor(model => model.EnemyName, htmlAttributes: new { @class = "control-label col-md-4"})
-
-    </div>
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.EnemyName, )
+<div class="form-check">
+    <h2>Enemy Information</h2>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.EnemyName, htmlAttributes: new { @class = "control-label col-md-8" })
+        <div class="form-group">
+            @Html.EditorFor(model => model.EnemyName, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EnemyName, "", new { @class = "text-danger" })
         </div>
-
-
     </div>
-}*@
+    <div class="form-group">
+        @Html.LabelFor(model => model.EnemyHP, htmlAttributes: new { @class = "control-label col-md-8" })
+        <div class="form-group">
+            @Html.EditorFor(model => model.EnemyHP, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EnemyHP, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.EnemyAttack, htmlAttributes: new { @class = "control-label col-md-8" })
+        <div class="form-group">
+            @Html.EditorFor(model => model.EnemyAttack, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EnemyAttack, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.EnemyDescription, htmlAttributes: new { @class = "control-label col-md-8" })
+        <div class="form-group">
+            @Html.EditorFor(model => model.EnemyDescription, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EnemyDescription, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.EnemyImageSrc, htmlAttributes: new { @class = "control-label col-md-8" })
+        <div class="form-group">
+            @Html.EditorFor(model => model.EnemyImageSrc, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EnemyImageSrc, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+}
 

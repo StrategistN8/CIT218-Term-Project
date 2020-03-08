@@ -41,7 +41,7 @@ namespace AbyssRunSite.Models
             set { _levelDescription = value; }
         }
 
-        [Display(Name ="Screenshot File Path")]
+        [Display(Name ="Image")]
         public string LevelScreenshotSrc
         {
             get { return _levelScreenshotSrc; }

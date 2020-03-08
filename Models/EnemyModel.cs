@@ -42,6 +42,7 @@ namespace AbyssRunSite.Models
         
         [Display(Name = "Name")]
         [Required]
+        [RegularExpression(@"^[a-zA-Z''-'\s]{1,50}$", ErrorMessage = "Names should be limited to 1-50 upper or lowercase letters")]
         [MaxLength(50, ErrorMessage = "Names should be limited to 50 characters")]
         public string EnemyName
         {
@@ -65,7 +66,7 @@ namespace AbyssRunSite.Models
             set { _enemyDescription = value; }
         }
 
-        [Display(Name = "Image File Path")]   // This one should not be visable to the end user.
+        [Display(Name = "Image")]   
         [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "No Image")]
         public string EnemyImageSrc
         {

@@ -8,7 +8,7 @@
     <table class="table table-responsive-lg bg-dark">
         <tr>
             <th>@Html.DisplayNameFor(model => model.EnemyName)</th>
-            <th>Image</th>
+            <th>@Html.DisplayNameFor(model => model.EnemyImageSrc)</th>
             <th>@Html.DisplayNameFor(model => model.EnemyDescription)</th>
         </tr>
 
@@ -27,6 +27,8 @@
                     <td>No Image Available</td>
                 }
                 <td>@Html.DisplayFor(modelItem => item.EnemyDescription)</td>
+                <td>@Html.ActionLink("Edit", "EditDisplayInfo", new { id = item.Id })</td>
+
             </tr>
         }
     </table>
