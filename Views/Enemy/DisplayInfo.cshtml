@@ -10,6 +10,7 @@
             <th>@Html.DisplayNameFor(model => model.EnemyName)</th>
             <th>@Html.DisplayNameFor(model => model.EnemyImageSrc)</th>
             <th>@Html.DisplayNameFor(model => model.EnemyDescription)</th>
+            <th>Options</th>
         </tr>
 
         @foreach (var item in Model)
@@ -27,7 +28,7 @@
                     <td>No Image Available</td>
                 }
                 <td>@Html.DisplayFor(modelItem => item.EnemyDescription)</td>
-                <td>@Html.ActionLink("Edit", "EditDisplayInfo", new { id = item.Id })</td>
+                <td>@Html.ActionLink("Details", "Details", new { id = item.Id })</td>
 
             </tr>
         }

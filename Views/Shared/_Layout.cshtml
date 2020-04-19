@@ -11,15 +11,17 @@
         body {
             padding-top: 0px;
         }
-        .navbar{
+        .navbar {
             font-family: Xolonium;
-            background-color:black;
-            /*background-image: url(../../Content/Images/GlyphsH.png);*/
+            background-color: black;
+            background-image: url(../../Content/Images/Grate.png);
+            background-repeat: repeat-x;
         }
-        .navbar a:link {
-            color: darkorange;
-            text-decoration: none;
-        }
+
+            .navbar a:link {
+                color: darkorange;
+                text-decoration: none;
+            }
 
         .navbar a:visited {
             color: darkorange;
@@ -76,7 +78,7 @@
     <section class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
+        <footer class="col-12">
             <p class="text-danger">&copy; @DateTime.Now.Year - Jim Lyons</p>
         </footer>
     </section>

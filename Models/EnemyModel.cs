@@ -66,7 +66,7 @@ namespace AbyssRunSite.Models
             set { _enemyDescription = value; }
         }
 
-        [Display(Name = "Image")]   
+        [Display(Name = "Sprite")]   
         [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "No Image")]
         public string EnemyImageSrc
         {

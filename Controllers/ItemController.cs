@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -11,17 +12,39 @@ using AbyssRunSite.DataAccessLayer;
 
 namespace AbyssRunSite.Controllers
 {
+    [Authorize]
     public class ItemController : Controller
     {
         private AbyssContext db = new AbyssContext();
 
-        // GET: ItemModels
-        public ActionResult Index()
+        /// <summary>
+        /// Index Page for Items.
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Index(string sortOrder)
         {
-            return View(db.Items.ToList());
+            ViewBag.SortName = String.IsNullOrEmpty(sortOrder) ? "nameDesc" : "";
+
+            var items = from i in db.Items
+                          select i;
+            switch (sortOrder)
+            {
+                case "nameDesc":
+                    items = items.OrderByDescending(i => i.ItemName);
+                    break;
+                default:
+                    items = items.OrderBy(i => i.ItemName);
+                    break;
+            }
+
+                    return View(items.ToList());
         }
 
-        // GET: ItemModels/Details/5
+        /// <summary>
+        /// Details page for Items
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,15 +59,20 @@ namespace AbyssRunSite.Controllers
             return View(itemModel);
         }
 
-        // GET: ItemModels/Create
+        /// <summary>
+        /// Create Page for Items.
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: ItemModels/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+     /// <summary>
+     /// POST page for Creating Items.
+     /// </summary>
+     /// <param name="itemModel"></param>
+     /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,ItemName")] ItemModel itemModel)
@@ -59,7 +87,11 @@ namespace AbyssRunSite.Controllers
             return View(itemModel);
         }
 
-        // GET: ItemModels/Edit/5
+        /// <summary>
+        /// Edit Page for items.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -74,9 +106,11 @@ namespace AbyssRunSite.Controllers
             return View(itemModel);
         }
 
-        // POST: ItemModels/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+       /// <summary>
+       /// POST edit page for items.
+       /// </summary>
+       /// <param name="itemModel"></param>
+       /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,ItemName")] ItemModel itemModel)
@@ -90,7 +124,11 @@ namespace AbyssRunSite.Controllers
             return View(itemModel);
         }
 
-        // GET: ItemModels/Delete/5
+       /// <summary>
+       /// Delete page for items.
+       /// </summary>
+       /// <param name="id"></param>
+       /// <returns></returns>
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -105,7 +143,11 @@ namespace AbyssRunSite.Controllers
             return View(itemModel);
         }
 
-        // POST: ItemModels/Delete/5
+        /// <summary>
+        /// POST delete page for items.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -116,6 +158,10 @@ namespace AbyssRunSite.Controllers
             return RedirectToAction("Index");
         }
 
+        /// <summary>
+        /// Required for IDisposable.
+        /// </summary>
+        /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
             if (disposing)

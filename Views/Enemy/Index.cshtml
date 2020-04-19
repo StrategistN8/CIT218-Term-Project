@@ -9,23 +9,30 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@using (Html.BeginForm())
+{
+    <p>
+        Search: @Html.TextBox("search")
+        <input type="submit" value="search" />
+    </p>
+}
 <section class="col-12">
     <table class="table-responsive-xl">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.EnemyName)
+                @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.SortName })
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.EnemyAttack)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EnemyHP)
+                @Html.ActionLink("Health", "Index", new { sortOrder = ViewBag.SortHP })
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.EnemyDescription)
             </th>
             <th>
-                Image
+                @Html.DisplayNameFor(model => model.EnemyImageSrc)
             </th>
             <th></th>
         </tr>
@@ -61,6 +68,7 @@
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </td>
             </tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         }
 
     </table>

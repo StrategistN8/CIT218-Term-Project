@@ -1,15 +1,26 @@
 ﻿@model AbyssRunSite.Models.EnemyModel
-
-@{
-    ViewBag.Title = "Details";
-}
-
-<h2>Details</h2>
-
-<div>
-    <h4>EnemyModel</h4>
+    
+<section class="jumbotron">
+        <h1>Enemy Details</h1>
+</section>
+    <h2>@Html.DisplayFor(model => model.EnemyName)</h2>
     <hr />
     <dl class="d-lg-inline-block">
+        <dt>
+            @Html.DisplayNameFor(model => model.EnemyImageSrc)
+        </dt>
+            @if (Model.EnemyImageSrc != "" && Model.EnemyImageSrc != null)
+            {
+                <dd>
+                    <img src=@Url.Content(Model.EnemyImageSrc) alt="@Html.DisplayFor(model => Model.EnemyName)" />
+                </dd>
+            }
+            else
+            {
+                <dd>No Image Available</dd>
+            }
+        
+
         <dt>
             @Html.DisplayNameFor(model => model.EnemyHP)
         </dt>
@@ -17,15 +28,6 @@
         <dd>
             @Html.DisplayFor(model => model.EnemyHP)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EnemyName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EnemyName)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.EnemyAttack)
         </dt>
@@ -42,16 +44,16 @@
             @Html.DisplayFor(model => model.EnemyDescription)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.EnemyImageSrc)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.EnemyImageSrc)
-        </dd>
+        </dd>*@
 
     </dl>
-</div>
+</>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")

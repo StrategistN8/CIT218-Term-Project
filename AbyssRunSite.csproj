@@ -94,6 +94,12 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -180,11 +186,14 @@
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\LevelController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DataAccessLayer\AbyssConfiguration.cs" />
     <Compile Include="DataAccessLayer\AbyssContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\AbyssInitalizer.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EnemyModel.cs" />
     <Compile Include="Models\FeedbackModel.cs" />
@@ -209,6 +218,7 @@
     <Content Include="Content\Images\GR01.PNG" />
     <Content Include="Content\Images\GR03.PNG" />
     <Content Include="Content\Images\GR04.PNG" />
+    <Content Include="Content\Images\Grate.png" />
     <Content Include="Content\Images\Hoplite.png" />
     <Content Include="Content\Images\Legionary.png" />
     <Content Include="Content\Images\Pandinus.png" />
@@ -217,6 +227,7 @@
     <Content Include="Content\Images\Rock.png" />
     <Content Include="Content\Images\ScorpuronLogo.png" />
     <Content Include="Content\Images\Venator.png" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />

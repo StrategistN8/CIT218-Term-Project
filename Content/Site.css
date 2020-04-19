@@ -1,21 +1,23 @@
-﻿@font-face{
+﻿@font-face {
     font-family: Nero;
-    src: url(Fonts/Nero-gaoR.ttf)    
+    src: url(Fonts/Nero-gaoR.ttf)
 }
+
 @font-face {
     font-family: Xolonium;
     src: url(Fonts/Xolonium-pn4D.ttf)
 }
 
 
-h1{
+h1 {
     font-family: Nero;
 }
 
-h2{
-    font-family:Xolonium;
+h2 {
+    font-family: Xolonium;
 }
-p{
+
+p {
     font-family: Xolonium;
 }
 
@@ -31,28 +33,68 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
-table{
-    border-color: orange;
-}
-th{
-    font-family: Nero;
-    color:orange;
-    letter-spacing:3px;
-    
-}
-tr{
-    font-family:Xolonium;
-    color:darkorange;
+
+table {
+    border: 3px inset orange;
+    box-shadow: black 10px 10px;
+    background-image: url(Images/Rock.png);
+    background-repeat: repeat;
 }
 
-a{
+th {
+    font-family: Nero;
     color: orange;
-    text-decoration:none;
+    letter-spacing: 3px;
+    text-align: center;
+    background-color: rgba(51, 44, 53, 0.575);
 }
-    a:hover {
+
+tr {
+    font-family: Xolonium;
+    color: darkorange;
+    padding: 1px;
+    background-color: rgba(51, 44, 53, 0.575);
+}
+
+tr img{
+    align-self:center;
+}
+
+a {
+    color: orange;
+    text-decoration: none;
+}
+
+a:hover {
+   color: lemonchiffon;
+   transition: 1s; 
+}
+
+.navbar {
+    font-family: Xolonium;
+    background-color: black;
+    background-image: url(../../Content/Images/Grate.png);
+    background-repeat: repeat-x;
+}
+
+    .navbar a:link {
+        color: darkorange;
+        text-decoration: none;
+    }
+
+    .navbar a:visited {
+        color: darkorange;
+    }
+
+    .navbar a:hover {
         color: lemonchiffon;
         transition: 1s;
+        /*font-size: 1.2em;*/
     }
+
+.nav li {
+    padding: 2px;
+}    
 
 /*hr{
     border: solid 2px darkorange;
@@ -75,10 +117,9 @@ textarea {
 .jumbotron {
     background-image: url(Images/Rock.png);
     background-repeat: repeat;
-    
 }
 
-button{
-    background-color:transparent;
-    border-color:transparent;
+button {
+    background-color: transparent;
+    border-color: transparent;
 }
