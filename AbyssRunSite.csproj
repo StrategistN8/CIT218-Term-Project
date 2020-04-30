@@ -174,12 +174,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationContextMigrations\202004281706099_FreshStart.cs" />
-    <Compile Include="ApplicationContextMigrations\202004281706099_FreshStart.designer.cs">
-      <DependentUpon>202004281706099_FreshStart.cs</DependentUpon>
+    <Compile Include="ApplicationContextMigrations\202004300314356_NewInitial.cs" />
+    <Compile Include="ApplicationContextMigrations\202004300314356_NewInitial.designer.cs">
+      <DependentUpon>202004300314356_NewInitial.cs</DependentUpon>
     </Compile>
     <Compile Include="ApplicationContextMigrations\Configuration.cs" />
-    <Compile Include="ApplicationContextMirgations\Configuration.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -191,17 +190,15 @@
     <Compile Include="Controllers\FeedbackModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
+    <Compile Include="Controllers\ItemModelController.cs" />
     <Compile Include="Controllers\LevelController.cs" />
+    <Compile Include="Controllers\LevelModelController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DataAccessLayer\AbyssConfiguration.cs" />
     <Compile Include="DataAccessLayer\AbyssContext.cs" />
-    <Compile Include="DataContextMigrations\202004281700596_FreshStart.cs" />
-    <Compile Include="DataContextMigrations\202004281700596_FreshStart.designer.cs">
-      <DependentUpon>202004281700596_FreshStart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContextMigrations\202004300127579_Initial.cs" />
-    <Compile Include="DataContextMigrations\202004300127579_Initial.designer.cs">
-      <DependentUpon>202004300127579_Initial.cs</DependentUpon>
+    <Compile Include="DataContextMigrations\202004300305393_NewInitial.cs" />
+    <Compile Include="DataContextMigrations\202004300305393_NewInitial.designer.cs">
+      <DependentUpon>202004300305393_NewInitial.cs</DependentUpon>
     </Compile>
     <Compile Include="DataContextMigrations\Configuration.cs" />
     <Compile Include="Global.asax.cs">
@@ -425,6 +422,16 @@
     <Content Include="Views\EnemyModel\Details.cshtml" />
     <Content Include="Views\EnemyModel\Edit.cshtml" />
     <Content Include="Views\EnemyModel\Index.cshtml" />
+    <Content Include="Views\ItemModel\Create.cshtml" />
+    <Content Include="Views\ItemModel\Delete.cshtml" />
+    <Content Include="Views\ItemModel\Details.cshtml" />
+    <Content Include="Views\ItemModel\Edit.cshtml" />
+    <Content Include="Views\ItemModel\Index.cshtml" />
+    <Content Include="Views\LevelModel\Create.cshtml" />
+    <Content Include="Views\LevelModel\Delete.cshtml" />
+    <Content Include="Views\LevelModel\Details.cshtml" />
+    <Content Include="Views\LevelModel\Edit.cshtml" />
+    <Content Include="Views\LevelModel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -441,14 +448,11 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ApplicationContextMigrations\202004281706099_FreshStart.resx">
-      <DependentUpon>202004281706099_FreshStart.cs</DependentUpon>
+    <EmbeddedResource Include="ApplicationContextMigrations\202004300314356_NewInitial.resx">
+      <DependentUpon>202004300314356_NewInitial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataContextMigrations\202004281700596_FreshStart.resx">
-      <DependentUpon>202004281700596_FreshStart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContextMigrations\202004300127579_Initial.resx">
-      <DependentUpon>202004300127579_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="DataContextMigrations\202004300305393_NewInitial.resx">
+      <DependentUpon>202004300305393_NewInitial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

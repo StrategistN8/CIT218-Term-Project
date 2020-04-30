@@ -50,7 +50,7 @@ namespace AbyssRunSite.Models
         }
 
         [Display(Name = "Level Introduced")]
-        public int LevelModelId { get; set; }
+        public int? LevelModelId { get; set; }
         #endregion
 
         #region CONSTRUCTOR

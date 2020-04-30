@@ -77,7 +77,7 @@ namespace AbyssRunSite.Models
 
         [Display(Name = "Level Introduced")]
         [Index]
-        public int LevelModelId { get; set; }
+        public int? LevelModelId { get; set; }
 
         #endregion
 

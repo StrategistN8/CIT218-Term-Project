@@ -1,0 +1,42 @@
+﻿@model AbyssRunSite.Models.LevelModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LevelModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LevelName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LevelName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LevelDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LevelDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LevelScreenshotSrc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LevelScreenshotSrc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

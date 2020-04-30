@@ -67,10 +67,11 @@
                     @Html.ActionLink("Contact", "Contact", "Home")
                 </li>
             </ul>
-            <ul class="nav navbar-nav ml-auto">
+            @Html.Partial("_LoginPartial")
+            @*<ul class="nav navbar-nav ml-auto">
                 <li class="nav-item nav-link"><a href="#"><i class="fas fa-user-plus"></i>Register</a></li>
                 <li class="nav-item nav-link"><a href="#"><i class="fas fa-sign-in-alt"></i>Login</a></li>
-            </ul>
+            </ul>*@
         </div>
     </nav>
 </header>

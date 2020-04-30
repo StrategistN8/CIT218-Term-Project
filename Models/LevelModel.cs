@@ -49,9 +49,11 @@ namespace AbyssRunSite.Models
         }
 
        [Display(Name = "New Enemies")]
-       public virtual ICollection<EnemyModel> LevelEnemies { get; set; }
+       //[ForeignKey("EnemyModel")]
+        public virtual ICollection<EnemyModel> LevelEnemies { get; set; }
 
         [Display(Name = "New Items")]
+        //[ForeignKey("ItemModel")]
         public virtual ICollection<ItemModel> LevelItems { get; set; }
 
         #endregion
