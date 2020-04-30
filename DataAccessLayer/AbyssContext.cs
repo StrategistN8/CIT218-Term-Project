@@ -10,7 +10,7 @@ namespace AbyssRunSite.DataAccessLayer
 {
     public class AbyssContext : DbContext
     {
-        public AbyssContext() : base("AbyssContext")
+        public AbyssContext() : base("DefaultConnection") // Formerly AbyssContext
         {
 
         }

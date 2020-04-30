@@ -1,0 +1,3 @@
+﻿SET IDENTITY_INSERT [dbo].[ItemModel] ON
+
+SET IDENTITY_INSERT [dbo].[ItemModel] OFF

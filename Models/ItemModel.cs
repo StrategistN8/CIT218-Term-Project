@@ -48,6 +48,9 @@ namespace AbyssRunSite.Models
             get { return _itemImgSrc; }
             set { _itemImgSrc = value; }
         }
+
+        [Display(Name = "Level Introduced")]
+        public int LevelModelId { get; set; }
         #endregion
 
         #region CONSTRUCTOR

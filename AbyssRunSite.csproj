@@ -174,6 +174,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationContextMigrations\202004281706099_FreshStart.cs" />
+    <Compile Include="ApplicationContextMigrations\202004281706099_FreshStart.designer.cs">
+      <DependentUpon>202004281706099_FreshStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationContextMigrations\Configuration.cs" />
+    <Compile Include="ApplicationContextMirgations\Configuration.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -181,6 +187,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EnemyController.cs" />
+    <Compile Include="Controllers\EnemyModelController.cs" />
     <Compile Include="Controllers\FeedbackModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
@@ -188,6 +195,15 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DataAccessLayer\AbyssConfiguration.cs" />
     <Compile Include="DataAccessLayer\AbyssContext.cs" />
+    <Compile Include="DataContextMigrations\202004281700596_FreshStart.cs" />
+    <Compile Include="DataContextMigrations\202004281700596_FreshStart.designer.cs">
+      <DependentUpon>202004281700596_FreshStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataContextMigrations\202004300127579_Initial.cs" />
+    <Compile Include="DataContextMigrations\202004300127579_Initial.designer.cs">
+      <DependentUpon>202004300127579_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataContextMigrations\Configuration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -404,6 +420,11 @@
     <Content Include="Views\FeedbackModels\Index.cshtml" />
     <Content Include="Views\Enemy\DisplayInfo.cshtml" />
     <Content Include="Views\Enemy\EditDisplayInfo.cshtml" />
+    <Content Include="Views\EnemyModel\Create.cshtml" />
+    <Content Include="Views\EnemyModel\Delete.cshtml" />
+    <Content Include="Views\EnemyModel\Details.cshtml" />
+    <Content Include="Views\EnemyModel\Edit.cshtml" />
+    <Content Include="Views\EnemyModel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -418,6 +439,17 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ApplicationContextMigrations\202004281706099_FreshStart.resx">
+      <DependentUpon>202004281706099_FreshStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContextMigrations\202004281700596_FreshStart.resx">
+      <DependentUpon>202004281700596_FreshStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContextMigrations\202004300127579_Initial.resx">
+      <DependentUpon>202004300127579_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

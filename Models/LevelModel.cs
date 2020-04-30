@@ -47,6 +47,13 @@ namespace AbyssRunSite.Models
             get { return _levelScreenshotSrc; }
             set { _levelScreenshotSrc = value; }
         }
+
+       [Display(Name = "New Enemies")]
+       public virtual ICollection<EnemyModel> LevelEnemies { get; set; }
+
+        [Display(Name = "New Items")]
+        public virtual ICollection<ItemModel> LevelItems { get; set; }
+
         #endregion
 
         #region CONSTRUCTOR

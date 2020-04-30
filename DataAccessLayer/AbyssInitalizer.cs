@@ -4,11 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using AbyssRunSite.Models;
+using AbyssRunSite.DataAccessLayer;
 
 namespace AbyssRunSite.DataAccessLayer
 {
     public class AbyssInitalizer : System.Data.Entity.DropCreateDatabaseIfModelChanges<AbyssContext>
-    {
+    { 
 
         protected override void Seed(AbyssContext context)
         {
@@ -19,8 +20,8 @@ namespace AbyssRunSite.DataAccessLayer
                 new EnemyModel {EnemyName = "Praetorian", EnemyHP=2, EnemyAttack= "Stun Pistol and Thermal Blade", EnemyDescription = "Elite troops created to serve as both guards and assassins, Praetorian are both fast and aggressive. The modern incarnation of these elites has a small booster incorporated into their armor to further increase their speed on the charge.", EnemyImageSrc="~/Content/Images/Praetorian.png" },
                 new EnemyModel {EnemyName = "Hoplite", EnemyHP=3, EnemyAttack= "Venom", EnemyDescription = "Hoplites are defensive fighters trained to shield friendlies behind their shields. They appear to be descended from some of the more venomous scorpion species, complete with the ability to spray globs of venom from their tails.", EnemyImageSrc="~/Content/Images/Hoplite.png" },
                 new EnemyModel {EnemyName = "Venator", EnemyHP=10, EnemyAttack= "Massive Claws", EnemyDescription = "Venators live to hunt and feed, having the most animalistic minds of all Scorpuron subspecies. Their size and strength make them a daunting opponent that is best left alone when possible.", EnemyImageSrc="~/Content/Images/Venator.png" },
-                new EnemyModel {EnemyName = "Pandinus", EnemyHP=5, EnemyAttack= "Fireball, Teleportation", EnemyDescription = "One of the last of the regent line, Pandinus rules over the Scorpuron species and by extention the Abyss itself. He must be confronted in order to escape the facility. Battle with Pandinus is a daunting prospect, as the regent wields otherwordly powers.", EnemyImageSrc="~/Content/Images/Venator.png" },
-                new EnemyModel {EnemyName = "Genetrix", EnemyHP = 10, EnemyAttack = "Scorplings, Massive Claws, Venom", EnemyDescription = "Genetrix are Scorpuron females with offspring. They carry broods of Scorplings upon their backs until they are grown enough to be self-sufficent. They are generally found in the safety of brood chambers and will fight fiercely to protect their young.", EnemyImageSrc = "" }
+                new EnemyModel {EnemyName = "Pandinus", EnemyHP=5, EnemyAttack= "Fireball, Teleportation", EnemyDescription = "One of the last of the regent line, Pandinus rules over the Scorpuron species and by extention the Abyss itself. He must be confronted in order to escape the facility. Battle with Pandinus is a daunting prospect, as the regent wields otherwordly powers.", EnemyImageSrc="~/Content/Images/Pandinus.png" },
+                //new EnemyModel {EnemyName = "Genetrix", EnemyHP = 10, EnemyAttack = "Scorplings, Massive Claws, Venom", EnemyDescription = "Genetrix are Scorpuron females with offspring. They carry broods of Scorplings upon their backs until they are grown enough to be self-sufficent. They are generally found in the safety of brood chambers and will fight fiercely to protect their young.", EnemyImageSrc = "" }
             };
 
             enemies.ForEach(foe => context.Enemies.Add(foe));
@@ -46,9 +47,9 @@ namespace AbyssRunSite.DataAccessLayer
                 new ItemModel { ItemName = "Rift Generator", ItemDescription = "This otherwordly device launches a stream of particles that can translocate the weapon (and anyone holding it) to their location on termination. Has strange interactions upon impact with other beings..."},
                 new ItemModel { ItemName = "MMC", ItemDescription = "This weapon fires shells containing a soft metal core and explosive gel. Upon firing the core is liquified, causing a shower of molten material on impact. " },
                 new ItemModel { ItemName = "MMC Ammo", ItemDescription = "Additional shells for the MMC weapon. Each pack contains 3 shells." },
-                new ItemModel { ItemName = "Reflex Shield", ItemDescription = "An energy barrier that reflects solid and energy projectiles until its power is depleted." },
-                new ItemModel { ItemName = "Shroud Device", ItemDescription = "This device partially phases the user out of sync with the rest of the world for a brief time, allowing them to sneak past enemies and bypass certain obstacles."},
-                new ItemModel { ItemName = "Nephilim Suit", ItemDescription = "A relic of the First Era, this suit of advanced armor features built-in weaponry and a jetpack. Can take several hits before being depleted." },
+               // new ItemModel { ItemName = "Reflex Shield", ItemDescription = "An energy barrier that reflects solid and energy projectiles until its power is depleted." },
+               // new ItemModel { ItemName = "Shroud Device", ItemDescription = "This device partially phases the user out of sync with the rest of the world for a brief time, allowing them to sneak past enemies and bypass certain obstacles."},
+               // new ItemModel { ItemName = "Nephilim Suit", ItemDescription = "A relic of the First Era, this suit of advanced armor features built-in weaponry and a jetpack. Can take several hits before being depleted." },
             };
 
             items.ForEach(itm => context.Items.Add(itm));

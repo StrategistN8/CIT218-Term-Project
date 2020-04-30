@@ -39,7 +39,8 @@ namespace AbyssRunSite.Models
             get { return _enemyHP; }
             set { _enemyHP = value; }
         }
-        
+
+        [Index]
         [Display(Name = "Name")]
         [Required]
         [RegularExpression(@"^[a-zA-Z''-'\s]{1,50}$", ErrorMessage = "Names should be limited to 1-50 upper or lowercase letters")]
@@ -51,7 +52,7 @@ namespace AbyssRunSite.Models
         }
 
         [Display(Name = "Weapons")]
-        [MaxLength(150, ErrorMessage = "Limited to 150 characters")]
+        //[MaxLength(150, ErrorMessage = "Limited to 150 characters")]
         public string EnemyAttack
         {
             get { return _enemyAttack; }
@@ -59,7 +60,7 @@ namespace AbyssRunSite.Models
         }
 
         [Display(Name = "Description")]
-        [MaxLength(250, ErrorMessage = "Descriptions should be limited to 250 characters")]
+        //[MaxLength(250, ErrorMessage = "Descriptions should be limited to 250 characters")]
         public string EnemyDescription
         {
             get { return _enemyDescription; }
@@ -74,6 +75,9 @@ namespace AbyssRunSite.Models
             set { _enemyImageSrc = value; }
         }
 
+        [Display(Name = "Level Introduced")]
+        [Index]
+        public int LevelModelId { get; set; }
 
         #endregion
 
