@@ -83,4 +83,12 @@ namespace AbyssRunSite.Models
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
     }
+
+    public class LevelPopulatonViewModel
+    {
+        public ICollection<LevelModel> LevelData { get; set; }
+        public ICollection<EnemyModel> EnemyData { get; set; }
+        public ICollection<ItemModel> ItemData { get; set; }
+    }
+
 }

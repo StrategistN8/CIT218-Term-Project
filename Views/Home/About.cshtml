@@ -2,21 +2,29 @@
     <h1>About</h1>
 </article>
 <p>Abyss Run is a 2d action platformer that was originally created as a final project for CIT131 at Northwestern Michigan Collage.</p>
-<hr style="background-image: url(../../Content/Images/GlyphsH.png); background-repeat:repeat-x;"/>
+<hr/>
+<article class="jumbotron" style="background-image: url(../../Content/Images/ScorpuronLogo.png); background-repeat: no-repeat; background-position: center; background-size:30%; background-color:black;">
+    <h1>Story</h1>
+    <p style="background-color: rgba(51, 44, 53, 0.575);">Long ago in the mists of prehistory, the race of the Scorpuron were created to guard the underworlds of the earth and the secrets thereof. The greatest of these treasures was forged in the first era of man, a sprawling research center that was burried in a catalcysm that brought about the end of those supposedly more enlightened days. The submerging of this facility brought it into the domain of the scorpion folk and the creatures did guard their new charge well throughout the ancient era. Many myths were inspired by the creatures and their charge, but after a time they faded into obscurity as their legends were forgotten and the beings entered hybernation. Until now... </p>
+    @*<p><a class="btn btn-default">Read More &raquo;</a></p>*@
+</article>
 <section class="row">
-    <!--<article class="col-md-4">
-        <h1>Story</h1>
-        <p>Long ago in the mists of prehistory, the race of the Scorpuron were created to guard the underworlds of the earth and the secrets thereof. The greatest of these treasures was forged in the first era of man, a sprawling research center that was burried in a catalcysm that brought about the end of those supposedly more enlightened days. The submerging of this facility brought it into the domain of the scorpion folk and the creatures did guard their new charge well throughout the ancient era. Many myths were inspired by the creatures and their charge, but after a time they faded into obscurity as their legends were forgotten and the beings entered hybernation. Until now... </p>
-        <p><a class="btn btn-default">Read More &raquo;</a></p>
-    </article>-->
+    <article class="col-md-4">
+        <h1>Levels</h1>
+        <p>The catacombs of the underworld are hazardous to the extreme. Bring a map...</p>
+        @*<p><a class="btn btn-default">Read More &raquo;</a></p>*@
+    <p>@Html.ActionLink("Read More", "DisplayInfo", "Level")</p>
+    </article>
     <article class="col-md-4">
         <h1>Items</h1>
         <p>The facility has many items that can help Garrison in their quest to reach the surface and escape the facility.</p>
-        <p><a class="btn btn-default">Read More &raquo;</a></p>
+        @*<p><a class="btn btn-default">Read More &raquo;</a></p>*@
+        <p>@Html.ActionLink("Read More", "DisplayInfo", "Item")</p>
     </article>
     <article class="col-md-4">
         <h1>Enemies</h1>
         <p>As has been the case since the great cataclysm that brought an end to the first era, many different creatures stalk the halls of the Abyss - most of which are hostile.</p>
-        <p><a class="btn btn-default">Read More &raquo;</a></p>
+        @*<p><a class="btn btn-default">Read More &raquo;</a></p>*@
+        <p>@Html.ActionLink("Read More", "DisplayInfo", "Enemy")</p>
     </article>
 </section>

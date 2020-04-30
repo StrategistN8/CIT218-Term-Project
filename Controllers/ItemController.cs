@@ -26,7 +26,7 @@ namespace AbyssRunSite.Controllers
             ViewBag.SortName = String.IsNullOrEmpty(sortOrder) ? "nameDesc" : "";
 
             var items = from i in db.Items
-                          select i;
+                        select i;
             switch (sortOrder)
             {
                 case "nameDesc":
@@ -37,7 +37,7 @@ namespace AbyssRunSite.Controllers
                     break;
             }
 
-                    return View(items.ToList());
+            return View(items.ToList());
         }
 
         /// <summary>
@@ -68,11 +68,21 @@ namespace AbyssRunSite.Controllers
             return View();
         }
 
-     /// <summary>
-     /// POST page for Creating Items.
-     /// </summary>
-     /// <param name="itemModel"></param>
-     /// <returns></returns>
+        /// <summary>
+        /// Display Item Info Page (for public viewing).
+        /// </summary>
+        /// <returns></returns>
+        [AllowAnonymous]
+        public ActionResult DisplayInfo()
+        {
+            return View(db.Items.ToList());
+        }
+
+        /// <summary>
+        /// POST page for Creating Items.
+        /// </summary>
+        /// <param name="itemModel"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,ItemName")] ItemModel itemModel)
@@ -106,11 +116,11 @@ namespace AbyssRunSite.Controllers
             return View(itemModel);
         }
 
-       /// <summary>
-       /// POST edit page for items.
-       /// </summary>
-       /// <param name="itemModel"></param>
-       /// <returns></returns>
+        /// <summary>
+        /// POST edit page for items.
+        /// </summary>
+        /// <param name="itemModel"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,ItemName")] ItemModel itemModel)
@@ -124,11 +134,11 @@ namespace AbyssRunSite.Controllers
             return View(itemModel);
         }
 
-       /// <summary>
-       /// Delete page for items.
-       /// </summary>
-       /// <param name="id"></param>
-       /// <returns></returns>
+        /// <summary>
+        /// Delete page for items.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Delete(int? id)
         {
             if (id == null)

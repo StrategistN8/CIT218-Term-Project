@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using AbyssRunSite.Models;
 using AbyssRunSite.DataAccessLayer;
+using PagedList;
 
 namespace AbyssRunSite.Controllers
 {
@@ -36,6 +37,22 @@ namespace AbyssRunSite.Controllers
                 return HttpNotFound();
             }
             return View(levelModel);
+        }
+
+        /// <summary>
+        /// Display Item Info Page (for public viewing).
+        /// </summary>
+        /// <returns></returns>
+        [AllowAnonymous]
+        public ActionResult DisplayInfo(int? page)
+        {
+            LevelPopulatonViewModel levelInfo = new LevelPopulatonViewModel();
+
+            levelInfo.LevelData = db.Levels.ToList();
+            levelInfo.EnemyData = db.Enemies.ToList();
+            levelInfo.ItemData = db.Items.ToList();
+                       
+            return View(levelInfo);
         }
 
         // GET: Level/Create

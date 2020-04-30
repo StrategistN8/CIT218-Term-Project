@@ -1,0 +1,43 @@
+﻿@model IEnumerable<AbyssRunSite.Models.ItemModel>
+<style>
+    .jumbotron {
+        background-image: url(../../Content/Images/ItemHeader.PNG);
+        background-repeat: repeat-x;
+       background-size:contain;
+    }
+</style>
+<article class="jumbotron">
+    <h1>Items</h1>
+</article>
+
+<section class="col-12 jumbotron-fluid" id="itemHeader">
+    <table class="table table-responsive-lg bg-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ItemName)</th>
+            <th>@Html.DisplayNameFor(model => model.ItemImageSrc)</th>
+            <th>@Html.DisplayNameFor(model => model.ItemDescription)</th>
+            <th>Options</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ItemName)</td>
+                @if (item.ItemImageSrc != "" && item.ItemImageSrc != null)
+                {
+                    <td>
+                        <img src=@Url.Content(item.ItemImageSrc) alt="@Html.DisplayFor(modelItem => item.ItemName)" />
+                    </td>
+                }
+                else
+                {
+                    <td>No Image Available</td>
+                }
+                <td>@Html.DisplayFor(modelItem => item.ItemDescription)</td>
+                <td>@Html.ActionLink("Details", "Details", new { id = item.Id })</td>
+
+            </tr>
+        }
+    </table>
+
+</section>

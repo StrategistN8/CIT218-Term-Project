@@ -94,11 +94,12 @@ a:hover {
 
 .nav li {
     padding: 2px;
-}    
+}
 
-/*hr{
+hr {
     border: solid 2px darkorange;
-}*/
+    background-image: url(Images/GlyphsH.png);
+}
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -117,6 +118,10 @@ textarea {
 .jumbotron {
     background-image: url(Images/Rock.png);
     background-repeat: repeat;
+}
+
+#enemyHeader {
+    background-image: url(Images/EnemyHeader.PNG);
 }
 
 button {

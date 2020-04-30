@@ -1,10 +1,17 @@
 ﻿@model IEnumerable<AbyssRunSite.Models.EnemyModel>
+<style>
+    .jumbotron {
+        background-image: url(../../Content/Images/EnemyHeader.PNG);
+        background-repeat: repeat-x;
+        background-size:contain;
+    }
 
+</style>
 <article class="jumbotron">
     <h1>Enemies</h1>
 </article>
 
-<section class="col-12 jumbotron-fluid">
+<section class="col-12 jumbotron-fluid" id="enemyHeader">
     <table class="table table-responsive-lg bg-dark">
         <tr>
             <th>@Html.DisplayNameFor(model => model.EnemyName)</th>

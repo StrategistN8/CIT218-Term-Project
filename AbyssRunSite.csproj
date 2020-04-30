@@ -225,6 +225,8 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Armor.png" />
+    <Content Include="Content\Images\EnemyHeader.PNG" />
     <Content Include="Content\Images\Exit.png" />
     <Content Include="Content\Images\Glyphs.png" />
     <Content Include="Content\Images\GlyphsH.png" />
@@ -233,12 +235,23 @@
     <Content Include="Content\Images\GR04.PNG" />
     <Content Include="Content\Images\Grate.png" />
     <Content Include="Content\Images\Hoplite.png" />
+    <Content Include="Content\Images\InfoHeader.PNG" />
+    <Content Include="Content\Images\ItemHeader.PNG" />
     <Content Include="Content\Images\Legionary.png" />
     <Content Include="Content\Images\Pandinus.png" />
     <Content Include="Content\Images\Peltast.png" />
+    <Content Include="Content\Images\PlasmaCannon.png" />
     <Content Include="Content\Images\Praetorian.png" />
+    <Content Include="Content\Images\RiftGenerator.png" />
     <Content Include="Content\Images\Rock.png" />
+    <Content Include="Content\Images\Samples.png" />
     <Content Include="Content\Images\ScorpuronLogo.png" />
+    <Content Include="Content\Images\Screen1.PNG" />
+    <Content Include="Content\Images\Screen2.png" />
+    <Content Include="Content\Images\Screen3.png" />
+    <Content Include="Content\Images\Screen4.PNG" />
+    <Content Include="Content\Images\Screen5.PNG" />
+    <Content Include="Content\Images\Splash.PNG" />
     <Content Include="Content\Images\Venator.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
@@ -269,6 +282,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Content\Fonts\Nero-gaoR.ttf" />
     <Content Include="Content\Fonts\Xolonium-pn4D.ttf" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -432,6 +446,8 @@
     <Content Include="Views\LevelModel\Details.cshtml" />
     <Content Include="Views\LevelModel\Edit.cshtml" />
     <Content Include="Views\LevelModel\Index.cshtml" />
+    <Content Include="Views\Item\DisplayInfo.cshtml" />
+    <Content Include="Views\Level\DisplayInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
